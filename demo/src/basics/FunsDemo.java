@@ -6,6 +6,7 @@ public class FunsDemo {
 		System.out.println("Hello " + name);
 	}
 	
+	// Variable number of arguments 
 	static void printAll(String ... names ) {
 		 for(var n : names)
 			 System.out.println("Hello " + n);
@@ -14,6 +15,7 @@ public class FunsDemo {
 	public static void main(String[] args) {
 		print("James");
 		printAll("Scott","Larry","Mark");
+		printAll("Bill","Steve");
 	}
 
 }
