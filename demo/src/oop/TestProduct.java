@@ -4,10 +4,17 @@ class Product {
 	// instance variables
 	private String name;
 	private double price;
+	private int qoh;
+	// static variable or class variable
+	private static double taxrate = 12;
 	
-	// Default constructor 
+	public double getTaxRate() {
+		return  taxrate;
+	}
+
+	// Default constructor
 	public Product() {
-		
+
 	}
 
 	// methods
@@ -15,14 +22,23 @@ class Product {
 		name = n;
 		price = p;
 	}
-	
+
 	public double getNetPrice() {
-		return  price * 1.12;  // 12% tax 
+		return price * taxrate / 100 + price;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
+
+	public void sell(int qty) {
+		qoh -= qty;
+	}
+
+	public void purchase(int qty) {
+		qoh += qty;
+	}
+
 }
 
 public class TestProduct {
@@ -37,7 +53,6 @@ public class TestProduct {
 		Product p2 = new Product();
 		// p2.set("Apple Watch Series 7", 34000);
 		System.out.println(p2.getNetPrice());
-
 	}
 
 }
