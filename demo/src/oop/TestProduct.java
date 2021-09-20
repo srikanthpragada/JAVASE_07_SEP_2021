@@ -8,7 +8,7 @@ class Product {
 	// static variable or class variable
 	private static double taxrate = 12;
 	
-	public double getTaxRate() {
+	public static double getTaxRate() {
 		return  taxrate;
 	}
 
@@ -19,7 +19,7 @@ class Product {
 
 	// methods
 	public void set(String n, double p) {
-		name = n;
+		this.name = n;
 		price = p;
 	}
 
@@ -38,13 +38,15 @@ class Product {
 	public void purchase(int qty) {
 		qoh += qty;
 	}
-
 }
 
 public class TestProduct {
 
 	public static void main(String[] args) {
 		Product p1; // object reference
+		
+		System.out.println(Product.getTaxRate());
+		
 
 		p1 = new Product(); // object
 		p1.set("Iphone 13", 78000);
