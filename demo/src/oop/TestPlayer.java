@@ -7,10 +7,12 @@ class Player {
 		super();
 		this.name = name;
 	}
-
 	public void print() {
         System.out.println(this.name);
 	}
+    public int getPoints() {
+    	return 0;
+    }
 }
 
 class Cricketer extends Player {
@@ -24,14 +26,44 @@ class Cricketer extends Player {
 		  super.print();
 		  System.out.println(this.runs);
 	  }
+	  
+	  public int getPoints() {
+		  return  this.runs / 100;
+	  }
+}
+
+class Footballer extends Player {
+	  private int matches;
+	  public Footballer(String name, int matches) {
+		  super(name);
+		  this.matches = matches;
+	  }
+	  @Override 
+	  public void print() {
+		  super.print();
+		  System.out.println(this.matches);
+	  }
+	  
+	  public int getPoints() {
+		  return this.matches / 2;
+	  }
 }
 
 
 public class TestPlayer {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		// Compile-time polymorphism 
+		System.out.println(10);
+		System.out.println("Abc");
+		
+		Player p = new Cricketer("Abc",3939);  // Upcasting
+		p.print();  //  Runtime polymorphism
+		System.out.println(p.getPoints());
+		
+		p = new Footballer("Pqr",110);
+		p.print(); //  Runtime polymorphism
+		System.out.println(p.getPoints());
 	}
 
 }
