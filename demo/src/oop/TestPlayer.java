@@ -68,6 +68,11 @@ public class TestPlayer {
 		p = new Footballer("Pqr", 110);
 		p.print(); // Runtime polymorphism
 		System.out.println(p.getPoints());
+		
+		if (p instanceof Footballer v)
+		{
+			// use v 
+		}
 	}
 
 }
