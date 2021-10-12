@@ -1,12 +1,13 @@
 package coll;
 
+import java.time.LocalTime;
+import java.util.HashSet;
 import java.util.TreeSet;
 
 class Time implements Comparable<Time> {
 	private int h, m, s;
 
 	public Time(int h, int m, int s) {
-		super();
 		this.h = h;
 		this.m = m;
 		this.s = s;
@@ -34,7 +35,7 @@ class Time implements Comparable<Time> {
 
 	@Override
 	public int compareTo(Time other) {
-		return  this.totalSeconds() - other.totalSeconds(); 
+		return this.totalSeconds() - other.totalSeconds();
 	}
 }
 
@@ -50,13 +51,13 @@ public class SortTimes {
 		for (var t : times)
 			System.out.println(t);
 
-//		var localTimes = new HashSet<LocalTime>();
-//		localTimes.add(LocalTime.of(10, 10, 10));
-//		localTimes.add(LocalTime.of(10, 10, 10));
-//		localTimes.add(LocalTime.of(1, 2, 3));
-//
-//		for (var t : localTimes)
-//			System.out.println(t);
+		var localTimes = new HashSet<LocalTime>();
+		localTimes.add(LocalTime.of(10, 10, 10));
+		localTimes.add(LocalTime.of(10, 10, 10));
+		localTimes.add(LocalTime.of(1, 2, 3));
+
+		for (var t : localTimes)
+			System.out.println(t);
 
 	}
 }
