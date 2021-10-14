@@ -9,10 +9,9 @@ public class StreamDemo1 {
 		 
 		 // Arrays.stream(a).sorted().forEach( e -> System.out.println(e));
 		 Arrays.stream(a)
-		      .filter(e -> e % 2 == 0 )
-		      .sorted()
-		      .limit(3)
-		      .forEach(System.out::println);
+		      .filter(e -> e % 2 == 0 )             // IntPredicate - boolean test(int)  (intermediate op)
+		      .sorted()                             // intermediate op
+	          .forEach(v -> System.out.println(v)); // IntConsumer -  void accept(int)
 
 	}
 
