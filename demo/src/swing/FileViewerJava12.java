@@ -29,6 +29,8 @@ public class FileViewerJava12 extends JFrame {
 		JScrollPane sp = new JScrollPane(taContents,
 				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
 				JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		
+		// Event Handling 
 		btnOpen = new JButton("Open");
 		btnOpen.addActionListener(e -> openFile());
 		

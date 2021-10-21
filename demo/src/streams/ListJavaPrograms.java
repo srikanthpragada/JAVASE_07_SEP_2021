@@ -7,7 +7,7 @@ public class ListJavaPrograms {
 
 	public static void main(String[] args) throws Exception {
 
-		Files.walk(Path.of("c:\\classroom\\may14"))
+		Files.walk(Path.of("c:\\classroom\\sep7"))
 		      .filter(p -> p.toString().endsWith(".java"))
 		      .forEach(System.out::println);
 	}

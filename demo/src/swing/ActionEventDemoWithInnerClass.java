@@ -22,6 +22,7 @@ public class ActionEventDemoWithInnerClass extends JFrame  {
 		
 		btnShow = new JButton("Show Date and Time");
 		
+		// Anonymous inner class 
 		btnShow.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

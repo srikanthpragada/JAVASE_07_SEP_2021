@@ -9,9 +9,11 @@ public class SortLongNames2 {
     
 		 var avglength = 
 			   Files.lines(Path.of("c:\\classroom\\players.txt"))
-		      .mapToInt( v -> v.length())
+		      .mapToInt(v -> v.length())
 		      .average()
 		      .getAsDouble();
+		 
+		  System.out.println(avglength);
 		   
 		  Files.lines(Path.of("c:\\classroom\\players.txt"))
 		       .filter(v -> v.length() > avglength)

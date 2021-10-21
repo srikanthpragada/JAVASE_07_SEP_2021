@@ -20,8 +20,8 @@ public class ActionEventDemoWithLambda extends JFrame  {
 		lblMessage = new JLabel();
 		lblMessage.setHorizontalAlignment(JLabel.CENTER);
 		
-		
 		btnShow = new JButton("Show Date and Time");
+		// Lambda Expression
 		btnShow.addActionListener( e ->  lblMessage.setText( new Date().toString()));
 		
 		Container c = getContentPane();

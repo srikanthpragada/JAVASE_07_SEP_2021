@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 class ExitListener implements ActionListener {
 	@Override
@@ -17,6 +18,7 @@ class ExitListener implements ActionListener {
  
 public class ActionEventDemoWithAnotherClass extends JFrame  {
 	JButton btnExit;
+	//JLabel lblCount;
 	
 	public ActionEventDemoWithAnotherClass() {
 		super("ActionEvent Demo");
